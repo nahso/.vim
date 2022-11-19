@@ -15,6 +15,7 @@ set encoding=utf-8
 
 set clipboard=unnamed
 set hidden
+" ctags -R --langmap=c++:+.cu <path to cuda/include>
 set tags=./.tags;,.tags,~/.cache/tags/c++.tags,~/.cache/tags/dpcpp.tags,~/.cache/tags/cuda.tags
 
 " Prevent delay when O after <esc>
