@@ -15,8 +15,7 @@ set encoding=utf-8
 
 set clipboard=unnamed
 set hidden
-"~/.cache/tags/dpcpp.tags
-set tags=./.tags;,.tags,~/.cache/tags/c++.tags
+set tags=./.tags;,.tags,~/.cache/tags/c++.tags,~/.cache/tags/dpcpp.tags,~/.cache/tags/cuda.tags
 
 " Prevent delay when O after <esc>
 set timeout timeoutlen=1000 ttimeoutlen=100
@@ -288,6 +287,8 @@ let g:gutentags_cache_dir = s:vim_tags
 let g:gutentags_ctags_extra_args = ['--fields=+nkisazS', '--extra=+q', '--sort=no', '--tag-relative=yes']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--langmap=c++:+.cu']
+let g:gutentags_ctags_extra_args += ['--langmap=c++:+.cuh']
 
 " 检测 ~/.cache/tags 不存在就新建
 if !isdirectory(s:vim_tags)
