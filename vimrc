@@ -156,6 +156,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
+Plug 'sickill/vim-monokai'
 
 " Git
 Plug 'rhysd/conflict-marker.vim'
@@ -188,7 +189,8 @@ call plug#end()
 " =========
 " = Plug config
 " =========
-colorscheme gruvbox
+colorscheme monokai
+"colorscheme snazzy
 
 " =========
 " = airline
