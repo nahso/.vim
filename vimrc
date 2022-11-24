@@ -12,6 +12,7 @@ filetype plugin on
 filetype plugin indent on
 set mouse=a
 set encoding=utf-8
+set autoread
 
 set clipboard=unnamed
 set hidden
@@ -153,6 +154,8 @@ Plug 'vim-airline/vim-airline-themes'
 " theme
 Plug 'connorholyday/vim-snazzy'
 Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-solarized8'
 
 " Git
 Plug 'rhysd/conflict-marker.vim'
@@ -185,8 +188,7 @@ call plug#end()
 " =========
 " = Plug config
 " =========
-colorscheme snazzy
-
+colorscheme gruvbox
 
 " =========
 " = airline
