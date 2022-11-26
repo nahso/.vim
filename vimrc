@@ -157,6 +157,7 @@ Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'sickill/vim-monokai'
+Plug 'liuchengxu/space-vim-dark'
 
 " Git
 Plug 'rhysd/conflict-marker.vim'
@@ -173,7 +174,8 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent' "i
 Plug 'kana/vim-textobj-syntax'
 Plug 'kana/vim-textobj-function', { 'for':['c', 'cpp', 'vim', 'java'] } "f
-Plug 'sgur/vim-textobj-parameter' ",
+Plug 'sgur/vim-textobj-parameter'
+Plug 'kana/vim-textobj-entire'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'ludovicchabant/vim-gutentags'
@@ -189,7 +191,8 @@ call plug#end()
 " =========
 " = Plug config
 " =========
-colorscheme monokai
+colorscheme space-vim-dark
+"colorscheme monokai
 "colorscheme snazzy
 
 " =========
