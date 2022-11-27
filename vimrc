@@ -164,7 +164,7 @@ Plug 'rhysd/conflict-marker.vim'
 Plug 'mhinz/vim-signify'
 Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'` to change 'word' to `word`
 Plug 'godlygeek/tabular' " type ;Tabularize /= to align the =
 Plug 'gcmt/wildfire.vim' " in Visual mode, type i' to select all text in '', or type i) i] i} ip
