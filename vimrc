@@ -153,9 +153,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 " theme
 Plug 'connorholyday/vim-snazzy'
-Plug 'dracula/vim'
-Plug 'morhetz/gruvbox'
-Plug 'lifepillar/vim-solarized8'
 Plug 'sickill/vim-monokai'
 Plug 'liuchengxu/space-vim-dark'
 
