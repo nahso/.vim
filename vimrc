@@ -16,8 +16,12 @@ set autoread
 
 set clipboard=unnamed
 set hidden
-" ctags -R --langmap=c++:+.cu <path to cuda/include>
-set tags=./.tags;,.tags,~/.cache/tags/c++.tags,~/.cache/tags/dpcpp.tags,~/.cache/tags/cuda.tags
+" ctags -R --langmap=c++:+.cu -f cuda.tags <path to cuda/include>
+" ctags -R -f c++.tags /usr/include/c++
+set tags=./.tags;,.tags
+for tagfile in split(globpath('~/.cache/tags/lib/', '*'), '\n')
+    let &tags .=',' . tagfile
+endfor
 
 " Prevent delay when O after <esc>
 set timeout timeoutlen=1000 ttimeoutlen=100
