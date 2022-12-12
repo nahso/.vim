@@ -124,6 +124,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Set <LEADER> as <SPACE>
 let mapleader=" "
 
+" 搜索当前选中的内容
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 nmap <leader>fs :w<cr>
@@ -213,7 +214,7 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 " ========
 " = commenter
 " ========
-nmap gcc <leader>cc
+"nmap gcc <leader>cc
 
 " ========
 " = esaymotion
@@ -271,8 +272,10 @@ function! MyTags()
     endif
 endfunction
 
+" 查找当前光标下的tag
 nmap <silent> <C-]> :call MyTags()<CR>
 
+" grep 查找选中的内容
 vnoremap <silent> <leader>s "vy:call
             \ fzf#vim#grep(
             \   'grep -r -i -n --exclude-dir={.svn,.git,TAGS} --binary-files=without-match -- ' . getreg('v'), 1,
@@ -311,7 +314,6 @@ endif
 " 自动打开 quickfix window ，高度为 6
 let g:asyncrun_open = 6
 
-" 设置 F10 打开/关闭 Quickfix 窗口
 nnoremap <leader>o :call asyncrun#quickfix_toggle(6)<cr>
 
 " ========
