@@ -1,3 +1,9 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " ====================
 " === Editor Setup ===
 " ====================
@@ -136,6 +142,9 @@ inoremap <c-f> <right>
 inoremap <c-b> <left>
 inoremap <c-g> <esc>
 
+nmap j gj
+nmap k gk
+
 nmap <leader>w <c-w>
 nmap <leader>wd <c-w>c
 nmap <leader>h :bp<CR>
@@ -187,6 +196,19 @@ Plug 'derekwyatt/vim-fswitch'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" 剪切板图片粘贴到本地
+Plug 'img-paste-devs/img-paste.vim'
+
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+" 在当前光标后生成目录
+" :GenTocMarked
+" 更新目录
+" :UpdateToc
+Plug 'mzlogin/vim-markdown-toc'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 call plug#end()
 
@@ -320,6 +342,13 @@ nnoremap <leader>o :call asyncrun#quickfix_toggle(6)<cr>
 " = fswitch
 " ========
 nmap <silent> <leader>fo :FSHere<CR>
+
+" ========
+" = markdown
+" ========
+autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownClipboardImage()<CR>
+let g:vim_markdown_math = 1
+let g:mkdp_path_to_chrome = 'chromium'
 
 " todo:
 " 重现上次的查找
