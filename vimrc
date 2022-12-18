@@ -1,7 +1,3 @@
-if empty(glob('~/.vim/plugged'))
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 " ====================
 " === Editor Setup ===
 " ====================
