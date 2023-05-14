@@ -336,3 +336,6 @@ nmap <silent> <leader>fo :FSHere<CR>
 "autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownClipboardImage()<CR>
 "let g:vim_markdown_math = 1
 "let g:mkdp_path_to_chrome = 'chromium'
+
+vmap <A-w> <Plug>OSCYankVisual
+
