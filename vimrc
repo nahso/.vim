@@ -206,6 +206,8 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'vim-scripts/LargeFile'
 
+Plug 'rickhowe/spotdiff.vim'
+
 call plug#end()
 
 " =========
@@ -339,3 +341,5 @@ nmap <silent> <leader>fo :FSHere<CR>
 
 vmap <A-w> <Plug>OSCYankVisual
 
+map <leader>dd :Diffthis<CR>
+map <leader>do :Diffoff<CR>
