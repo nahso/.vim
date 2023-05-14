@@ -14,6 +14,8 @@ set mouse=a
 set encoding=utf-8
 set autoread
 
+nnoremap q: <Nop>
+
 set clipboard=unnamed
 set hidden
 " ctags -R --langmap=c++:+.cu -f cuda.tags <path to cuda/include>
